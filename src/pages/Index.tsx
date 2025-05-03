@@ -69,7 +69,7 @@ const Index = () => {
               <div className="relative">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-tech-blue shadow-xl">
                   <img
-                    src="/public/lovable-uploads/6a7bee6b-c12d-470b-b11a-57f45e67fd8f.png"
+                    src="/lovable-uploads/6a7bee6b-c12d-470b-b11a-57f45e67fd8f.png"
                     alt="Thejas Thomas Mathew"
                     className="w-full h-full object-cover"
                   />
