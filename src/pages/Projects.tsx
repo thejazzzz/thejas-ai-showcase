@@ -6,7 +6,7 @@ const Projects = () => {
     {
       title: "AI-Driven Career Assistant Multi-Agent System",
       description: "AI-powered system using NLP and ML to provide personalized job recommendations and skill paths based on resumes.",
-      image: "https://i.postimg.cc/xT5vJPzj/5-Skill-Analyze-complete.png",
+      image: "/lovable-uploads/92257b3b-683c-4476-b78d-b02e758f5f7b.png",
       tech: ["AI", "NLP", "Python", "LangChain", "CrewAI"],
       github: "https://github.com/thejazzzz",
     },
