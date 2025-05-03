@@ -6,30 +6,30 @@ const Projects = () => {
     {
       title: "AI-Driven Career Assistant Multi-Agent System",
       description: "AI-powered system using NLP and ML to provide personalized job recommendations and skill paths based on resumes.",
-      image: "/lovable-uploads/92257b3b-683c-4476-b78d-b02e758f5f7b.png",
+      image: "/lovable-uploads/ai-driven.png",
       tech: ["AI", "NLP", "Python", "LangChain", "CrewAI"],
       github: "https://github.com/thejazzzz",
     },
     {
       title: "Snacker Vending Machine App",
       description: "A QR-based vending solution improving snack accessibility and transaction speed.",
-      image: "/placeholder.svg",
+      image: "/lovable-uploads/snacker.jpg ",
       tech: ["React", "QR Code", "Payment Integration"],
       website: "https://snacker.in.net",
     },
     {
       title: "Rapid Rescue (Sinova'24 Winner)",
       description: "AI healthcare solution that analyzes symptoms for diagnosis and emergency transport support.",
-      image: "/placeholder.svg",
+      image: "/lovable-uploads/swift-care.jpg",
       tech: ["AI", "Healthcare", "Python", "ML"],
-      github: "https://github.com/thejazzzz",
+      github: "https://github.com/thejazzzz/Swift_care",
     },
     {
-      title: "TeamSync (Eden 3.0 Runner-up)",
+      title: "ZenWork (Eden 3.0 Runner-up)",
       description: "Task management system built to enhance collaboration and productivity in teams.",
-      image: "/placeholder.svg",
+      image: "/lovable-uploads/ZenWork.png",
       tech: ["Task Management", "Collaboration", "Web App"],
-      github: "https://github.com/thejazzzz",
+      github: "https://github.com/thejazzzz/zenwork-eden-hackathon",
     },
   ];
 
