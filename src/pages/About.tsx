@@ -59,7 +59,7 @@ const About = () => {
               <div className="mb-8 flex justify-center">
                 <div className="relative">
                   <div className="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-tech-blue shadow-xl">
-                    <img alt="Thejas Thomas Mathew" className="w-full h-full object-cover" src="/lovable-uploads/3f603146-479c-4805-bcc0-776a61c01d47.jpg" />
+                    <img alt="Thejas Thomas Mathew" className="w-full h-full object-cover" src="/lovable-uploads/acb094cc-a801-4be9-8a62-a60198f2bd60.jpg" />
                   </div>
                   <div className="absolute -top-4 -right-4 w-20 h-20 bg-tech-purple/20 rounded-full blur-xl"></div>
                   <div className="absolute -bottom-2 -left-6 w-24 h-24 bg-tech-blue/20 rounded-full blur-xl"></div>
