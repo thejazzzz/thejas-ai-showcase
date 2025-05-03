@@ -1,73 +1,99 @@
-# Welcome to your Lovable project
+# Career Assistant Portfolio
 
-## Project info
+A modern portfolio web application built with Vite, React, TypeScript, shadcn-ui, and Tailwind CSS. This project showcases AI-driven solutions, personal projects, and professional achievements.
 
-**URL**: https://lovable.dev/projects/72272426-0d6b-45c0-842c-41ed6ec8abb4
+---
 
-## How can I edit this code?
+## 🚀 Project Overview
 
-There are several ways of editing your application.
+Career Assistant is a multi-agent system that leverages advanced AI technologies to provide personalized career guidance. Features include:
+- Resume analysis
+- Interview preparation
+- Personalized job recommendations
+- Real-time feedback
+- Progress tracking
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/72272426-0d6b-45c0-842c-41ed6ec8abb4) and start prompting.
+## 🛠️ Technologies Used
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Vite** – Fast frontend build tool
+- **React** – UI library for building interactive interfaces
+- **TypeScript** – Typed superset of JavaScript
+- **shadcn-ui** – Accessible and customizable UI components
+- **Tailwind CSS** – Utility-first CSS framework
+- **Radix UI** – Primitives for building accessible design systems
+- **Other Libraries:**  
+  - React Router DOM
+  - React Hook Form
+  - Zod
+  - Lucide React
+  - and more (see `package.json` for full list)
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🏃‍♂️ How to Run This Project Locally
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Steps
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. **Clone the repository:**
+   ```sh
+   git clone <YOUR_GIT_URL>
+   cd <YOUR_PROJECT_NAME>
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+3. **Start the development server:**
+   ```sh
+   npm run dev
+   ```
+   The app will be available at [http://localhost:8080](http://localhost:8080) (or the port shown in your terminal).
 
-**Edit a file directly in GitHub**
+4. **Build for production:**
+   ```sh
+   npm run build
+   ```
+   The production-ready files will be in the `dist` folder.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🌐 Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+You can deploy the built files in the `dist` folder to any static hosting service, such as Vercel, Netlify, GitHub Pages, or your own server.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 📄 Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- `src/` – Source code (pages, components, styles)
+- `public/` – Static assets (images, resume, etc.)
+- `package.json` – Project metadata and dependencies
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/72272426-0d6b-45c0-842c-41ed6ec8abb4) and click on Share -> Publish.
+## ✨ Customization
 
-## Can I connect a custom domain to my Lovable project?
+- **Update your projects:** Edit `src/pages/Projects.tsx` to add or modify project cards and images.
+- **Change your resume:** Replace `public/resume.pdf` with your own CV.
+- **Edit profile and content:** Update `src/pages/Index.tsx` and `src/pages/About.tsx` for your personal info.
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📬 Contact
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+For questions or collaboration, reach out via the contact form on the site or email: `thejasthomas2@gmail.com`.
+
+---
+
+## License
+
+This project is for personal portfolio use. Feel free to fork and adapt for your own needs!
