@@ -49,8 +49,8 @@ const Index = () => {
             </div>
             <div className="w-full lg:w-1/2 mb-10 lg:mb-0 flex justify-center order-1 lg:order-2">
               <div className="relative">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-tech-blue shadow-xl">
-                  <img alt="Thejas Thomas Mathew" className="w-full h-full object-cover" src="/lovable-uploads/aad932a1-d754-446a-90f7-291abd213c71.jpg" />
+              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-tech-blue shadow-xl">
+                  <img alt="Thejas Thomas Mathew" className="w-full h-full object-cover" src="/lovable-uploads/8b9b41e6-4bbe-46e2-bb4d-31ab9e43cc20.png" />
                 </div>
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-tech-purple/20 rounded-full blur-xl"></div>
