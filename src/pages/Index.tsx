@@ -1,18 +1,16 @@
-
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, ArrowDown, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Index = () => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById("about-section");
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
+      aboutSection.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <>
+  return <>
       {/* Hero Section */}
       <section className="min-h-screen flex items-center pt-16">
         <div className="container mx-auto">
@@ -38,29 +36,13 @@ const Index = () => {
                 </Link>
               </div>
               <div className="mt-8 flex items-center space-x-5">
-                <a
-                  href="https://github.com/thejazzzz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground/70 hover:text-tech-blue transition-colors"
-                  aria-label="GitHub"
-                >
+                <a href="https://github.com/thejazzzz" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-tech-blue transition-colors" aria-label="GitHub">
                   <Github className="h-6 w-6" />
                 </a>
-                <a
-                  href="https://www.linkedin.com/in/thejas-thomas-5834a0253"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground/70 hover:text-tech-blue transition-colors"
-                  aria-label="LinkedIn"
-                >
+                <a href="https://www.linkedin.com/in/thejas-thomas-5834a0253" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-tech-blue transition-colors" aria-label="LinkedIn">
                   <Linkedin className="h-6 w-6" />
                 </a>
-                <a
-                  href="mailto:thejasthomas2@gmail.com"
-                  className="text-foreground/70 hover:text-tech-blue transition-colors"
-                  aria-label="Email"
-                >
+                <a href="mailto:thejasthomas2@gmail.com" className="text-foreground/70 hover:text-tech-blue transition-colors" aria-label="Email">
                   <Mail className="h-6 w-6" />
                 </a>
               </div>
@@ -68,11 +50,7 @@ const Index = () => {
             <div className="w-full lg:w-1/2 mb-10 lg:mb-0 flex justify-center order-1 lg:order-2">
               <div className="relative">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-tech-blue shadow-xl">
-                  <img
-                    src="/lovable-uploads/6a7bee6b-c12d-470b-b11a-57f45e67fd8f.png"
-                    alt="Thejas Thomas Mathew"
-                    className="w-full h-full object-cover"
-                  />
+                  <img alt="Thejas Thomas Mathew" className="w-full h-full object-cover" src="/lovable-uploads/aad932a1-d754-446a-90f7-291abd213c71.jpg" />
                 </div>
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-tech-purple/20 rounded-full blur-xl"></div>
@@ -81,11 +59,7 @@ const Index = () => {
             </div>
           </div>
           <div className="absolute left-1/2 bottom-8 transform -translate-x-1/2 hidden md:block">
-            <button
-              onClick={scrollToAbout}
-              className="flex flex-col items-center text-foreground/60 hover:text-tech-blue transition-colors"
-              aria-label="Scroll to About section"
-            >
+            <button onClick={scrollToAbout} className="flex flex-col items-center text-foreground/60 hover:text-tech-blue transition-colors" aria-label="Scroll to About section">
               <span className="text-sm mb-2">Scroll Down</span>
               <ArrowDown className="h-4 w-4 animate-bounce" />
             </button>
@@ -185,8 +159,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default Index;
