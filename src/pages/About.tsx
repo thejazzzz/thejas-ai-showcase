@@ -1,10 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const About = () => {
-  return (
-    <div className="pt-24 pb-16">
+  return <div className="pt-24 pb-16">
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold mb-12">About Me</h1>
         
@@ -62,11 +59,7 @@ const About = () => {
               <div className="mb-8 flex justify-center">
                 <div className="relative">
                   <div className="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-tech-blue shadow-xl">
-                    <img
-                      src="/public/lovable-uploads/6a7bee6b-c12d-470b-b11a-57f45e67fd8f.png"
-                      alt="Thejas Thomas Mathew"
-                      className="w-full h-full object-cover"
-                    />
+                    <img alt="Thejas Thomas Mathew" className="w-full h-full object-cover" src="/lovable-uploads/3f603146-479c-4805-bcc0-776a61c01d47.jpg" />
                   </div>
                   <div className="absolute -top-4 -right-4 w-20 h-20 bg-tech-purple/20 rounded-full blur-xl"></div>
                   <div className="absolute -bottom-2 -left-6 w-24 h-24 bg-tech-blue/20 rounded-full blur-xl"></div>
@@ -124,8 +117,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
