@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/thejas-ai-showcase">
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Index />} />
