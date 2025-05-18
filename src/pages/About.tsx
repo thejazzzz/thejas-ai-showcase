@@ -35,10 +35,10 @@ const About = () => {
               <div className="space-y-6">
                 <div className="bg-secondary/40 p-6 rounded-lg">
                   <h4 className="font-medium text-lg">Runner-Up at Eden 3.0</h4>
-                  <p className="text-foreground/70">Zenwork</p>
+                  <p className="text-foreground/70">Marian College Thiruvanathapuram</p>
                   <p className="text-sm text-foreground/60">2024</p>
                   <p className="mt-2">
-                    Led development of TeamSync, a task management system focused on enhancing team collaboration and productivity.
+                    Led development of ZenWork, a task management system focused on enhancing team collaboration and productivity.
                   </p>
                 </div>
                 
