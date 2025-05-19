@@ -38,7 +38,7 @@ const About = () => {
                   <p className="text-foreground/70">Marian College Thiruvanathapuram</p>
                   <p className="text-sm text-foreground/60">2024</p>
                   <p className="mt-2">
-                    Led development of ZenWork, a task management system focused on enhancing team collaboration and productivity.
+                  Participated in development of ZenWork, a task management system focused on enhancing team collaboration and productivity.
                   </p>
                 </div>
                 
