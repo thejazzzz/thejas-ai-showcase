@@ -5,24 +5,29 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default:
+          "bg-gradient-to-r from-tech-purple to-tech-blue text-primary-foreground shadow-[0_12px_25px_-14px_rgba(109,40,217,0.9)] hover:scale-[1.02] hover:shadow-[0_16px_32px_-14px_rgba(109,40,217,0.9)]",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-border/80 bg-card/70 hover:bg-accent/60 hover:text-accent-foreground",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+          "bg-secondary text-secondary-foreground shadow-[0_8px_20px_-16px_rgba(139,92,246,0.9)] hover:bg-secondary/80",
+        ghost: "hover:bg-accent/70 hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        playful:
+          "border border-tech-purple/40 bg-card/85 text-foreground shadow-[0_12px_28px_-20px_rgba(109,40,217,0.9)] hover:-translate-y-0.5 hover:border-tech-blue/50 hover:bg-accent/40",
+        neon:
+          "bg-tech-purple text-white shadow-[0_0_0_rgba(168,85,247,0)] hover:animate-pulse-glow",
       },
       size: {
         default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        sm: "h-9 px-3",
+        lg: "h-11 px-8",
         icon: "h-10 w-10",
       },
     },

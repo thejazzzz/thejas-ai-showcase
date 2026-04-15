@@ -69,7 +69,7 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} className="space-y-6" method="POST" action="https://formspree.io/f/xkokojkw">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium mb-2">
+          <label htmlFor="name" className="block text-sm font-semibold mb-2">
             Your Name
           </label>
           <Input
@@ -82,7 +82,7 @@ const ContactForm = () => {
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium mb-2">
+          <label htmlFor="email" className="block text-sm font-semibold mb-2">
             Email Address
           </label>
           <Input
@@ -97,7 +97,7 @@ const ContactForm = () => {
         </div>
       </div>
       <div>
-        <label htmlFor="subject" className="block text-sm font-medium mb-2">
+        <label htmlFor="subject" className="block text-sm font-semibold mb-2">
           Subject
         </label>
         <Input
@@ -110,7 +110,7 @@ const ContactForm = () => {
         />
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-medium mb-2">
+        <label htmlFor="message" className="block text-sm font-semibold mb-2">
           Message
         </label>
         <Textarea
@@ -123,7 +123,7 @@ const ContactForm = () => {
           className="min-h-[120px]"
         />
       </div>
-      <Button type="submit" disabled={isSubmitting} className="w-full md:w-auto">
+      <Button type="submit" variant="neon" disabled={isSubmitting} className="w-full md:w-auto">
         {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
     </form>

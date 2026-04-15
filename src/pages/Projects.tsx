@@ -43,9 +43,9 @@ const Projects = () => {
   ];
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="page-shell">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold mb-12">My Projects</h1>
+        <h1 className="text-4xl font-display font-bold mb-12">My Projects</h1>
         
         <div className="mb-10">
           <p className="text-lg max-w-3xl">
@@ -68,8 +68,8 @@ const Projects = () => {
         </div>
         
         <div className="mt-16">
-          <h2 className="text-2xl font-bold mb-6">Other Notable Projects</h2>
-          <div className="bg-secondary/30 p-8 rounded-lg">
+          <h2 className="text-2xl font-display font-bold mb-6">Other Notable Projects</h2>
+          <div className="section-shell">
             <p className="text-lg mb-4">
               I'm constantly working on new projects and experimenting with various technologies. Check out my GitHub for more of my work.
             </p>
@@ -77,7 +77,7 @@ const Projects = () => {
               href="https://github.com/thejazzzz"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-foreground text-background font-medium py-2 px-6 rounded-md hover:opacity-90 transition-opacity"
+              className="inline-block bg-gradient-to-r from-tech-purple to-tech-blue text-white font-medium py-2 px-6 rounded-xl hover:opacity-90 transition-opacity"
             >
               Visit My GitHub
             </a>

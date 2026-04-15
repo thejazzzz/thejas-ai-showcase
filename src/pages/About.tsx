@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 const About = () => {
-  return <div className="pt-24 pb-16">
+  return <div className="page-shell">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold mb-12">About Me</h1>
+        <h1 className="text-4xl font-display font-bold mb-12">About Me</h1>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
           <div className="lg:col-span-2 order-2 lg:order-1">
-            <h2 className="text-2xl font-semibold mb-6">Who I Am</h2>
+            <h2 className="text-2xl font-display font-semibold mb-6">Who I Am</h2>
             <p className="text-lg mb-6">
               I'm Thejas Thomas Mathew, a final-year B.Tech Computer Science (AI) student at Providence College of Engineering with a passion for building AI-driven systems and intelligent solutions.
             </p>
@@ -19,8 +19,8 @@ const About = () => {
             </p>
             
             <div className="mt-10">
-              <h3 className="text-xl font-semibold mb-4">Academic Background</h3>
-              <div className="bg-secondary/40 p-6 rounded-lg">
+              <h3 className="text-xl font-display font-semibold mb-4">Academic Background</h3>
+              <div className="section-shell">
                 <div className="mb-6">
                   <h4 className="font-medium text-lg">B.Tech in Computer Science with AI</h4>
                   <p className="text-foreground/70">Providence College of Engineering</p>
@@ -31,9 +31,9 @@ const About = () => {
             </div>
             
             <div className="mt-10">
-              <h3 className="text-xl font-semibold mb-4">Notable Achievements</h3>
+              <h3 className="text-xl font-display font-semibold mb-4">Notable Achievements</h3>
               <div className="space-y-6">
-                <div className="bg-secondary/40 p-6 rounded-lg">
+                <div className="section-shell">
                   <h4 className="font-medium text-lg">Runner-Up at Eden 3.0</h4>
                   <p className="text-foreground/70">Marian College Thiruvanathapuram</p>
                   <p className="text-sm text-foreground/60">2024</p>
@@ -42,7 +42,7 @@ const About = () => {
                   </p>
                 </div>
                 
-                <div className="bg-secondary/40 p-6 rounded-lg">
+                <div className="section-shell">
                   <h4 className="font-medium text-lg">Winner at Sinova'24 Hackathon</h4>
                   <p className="text-foreground/70">SCMS Kochi</p>
                   <p className="text-sm text-foreground/60">2024</p>
@@ -58,16 +58,16 @@ const About = () => {
             <div className="sticky top-24">
               <div className="mb-8 flex justify-center">
                 <div className="relative">
-                  <div className="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-tech-blue shadow-xl">
+                  <div className="w-60 h-60 md:w-72 md:h-72 rounded-[2rem] overflow-hidden border-4 border-tech-purple/50 shadow-xl rotate-2">
                     <img alt="Thejas Thomas Mathew" className="w-full h-full object-cover" src="/lovable-uploads/acb094cc-a801-4be9-8a62-a60198f2bd60.jpg" />
                   </div>
-                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-tech-purple/20 rounded-full blur-xl"></div>
-                  <div className="absolute -bottom-2 -left-6 w-24 h-24 bg-tech-blue/20 rounded-full blur-xl"></div>
+                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-tech-purple/30 rounded-full blur-xl"></div>
+                  <div className="absolute -bottom-2 -left-6 w-24 h-24 bg-tech-blue/30 rounded-full blur-xl"></div>
                 </div>
               </div>
               
-              <div className="bg-secondary/40 p-6 rounded-lg mt-6">
-                <h3 className="font-semibold text-lg mb-4">Personal Details</h3>
+              <div className="section-shell mt-6">
+                <h3 className="font-display font-semibold text-lg mb-4">Personal Details</h3>
                 <ul className="space-y-3">
                   <li>
                     <span className="font-medium">Name:</span> Thejas Thomas Mathew
@@ -77,13 +77,13 @@ const About = () => {
                   </li>
                   <li>
                     <span className="font-medium">Email:</span>{" "}
-                    <a href="mailto:thejasthomas2@gmail.com" className="text-tech-blue hover:underline">
+                    <a href="mailto:thejasthomas2@gmail.com" className="text-tech-purple hover:underline">
                       thejasthomas2@gmail.com
                     </a>
                   </li>
                   <li>
                     <span className="font-medium">Phone:</span>{" "}
-                    <a href="tel:+919496195654" className="text-tech-blue hover:underline">
+                    <a href="tel:+919496195654" className="text-tech-purple hover:underline">
                       +91 9496195654
                     </a>
                   </li>
@@ -92,7 +92,7 @@ const About = () => {
               
               <div className="mt-6">
                 <Link to="/contact">
-                  <Button className="w-full">Get In Touch</Button>
+                  <Button variant="neon" className="w-full">Get In Touch</Button>
                 </Link>
               </div>
             </div>
@@ -100,16 +100,16 @@ const About = () => {
         </div>
         
         <div className="my-16 text-center">
-          <h2 className="text-2xl font-bold mb-6">What I'm Currently Working On</h2>
+          <h2 className="text-2xl font-display font-bold mb-6">What I'm Currently Working On</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-secondary/30 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">Multi-Agent Career Assistant</h3>
+            <div className="section-shell">
+              <h3 className="text-xl font-display font-semibold mb-3">Multi-Agent Career Assistant</h3>
               <p className="text-foreground/70">
                 Developing an AI-powered system that uses NLP and ML to provide personalized job recommendations and skill paths based on resumes.
               </p>
             </div>
-            <div className="bg-secondary/30 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">Snacker Vending Machine App</h3>
+            <div className="section-shell">
+              <h3 className="text-xl font-display font-semibold mb-3">Snacker Vending Machine App</h3>
               <p className="text-foreground/70">
                 Creating a QR-based vending solution to improve snack accessibility and transaction speed at snacker.in.net.
               </p>

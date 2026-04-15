@@ -3,9 +3,9 @@ import SkillCategory from "@/components/SkillCategory";
 
 const Skills = () => {
   return (
-    <div className="pt-24 pb-16">
+    <div className="page-shell">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold mb-12">My Skills</h1>
+        <h1 className="text-4xl font-display font-bold mb-12">My Skills</h1>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
@@ -35,8 +35,8 @@ const Skills = () => {
           </div>
           
           <div>
-            <div className="bg-secondary/30 p-8 rounded-lg mb-8">
-              <h3 className="text-xl font-semibold mb-4">Tools & Technologies</h3>
+            <div className="section-shell mb-8">
+              <h3 className="text-xl font-display font-semibold mb-4">Tools & Technologies</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <h4 className="font-medium mb-2">Development Tools</h4>
@@ -60,27 +60,27 @@ const Skills = () => {
             </div>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4">Soft Skills</h3>
+              <h3 className="text-xl font-display font-semibold mb-4">Soft Skills</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-secondary/20 p-4 rounded-lg">
+                <div className="section-shell">
                   <h4 className="font-medium mb-2">Problem Solving</h4>
                   <p className="text-foreground/70">
                     Ability to break down complex problems and find efficient solutions.
                   </p>
                 </div>
-                <div className="bg-secondary/20 p-4 rounded-lg">
+                <div className="section-shell">
                   <h4 className="font-medium mb-2">Teamwork</h4>
                   <p className="text-foreground/70">
                     Experience collaborating in diverse teams to achieve project goals.
                   </p>
                 </div>
-                <div className="bg-secondary/20 p-4 rounded-lg">
+                <div className="section-shell">
                   <h4 className="font-medium mb-2">Market Research</h4>
                   <p className="text-foreground/70">
                     Understanding market needs for product development.
                   </p>
                 </div>
-                <div className="bg-secondary/20 p-4 rounded-lg">
+                <div className="section-shell">
                   <h4 className="font-medium mb-2">Time & Activity Management</h4>
                   <p className="text-foreground/70">
                     Efficient organization of tasks and deadlines.
@@ -89,8 +89,8 @@ const Skills = () => {
               </div>
             </div>
             
-            <div className="bg-gradient-to-r from-tech-blue/10 to-tech-purple/10 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Professional Development</h3>
+            <div className="gradient-panel noise-overlay p-6">
+              <h3 className="text-xl font-display font-semibold mb-4">Professional Development</h3>
               <p className="text-foreground/80">
                 I'm continuously expanding my skill set through online courses, hackathons, and personal projects. Currently focusing on deepening my knowledge in:
               </p>

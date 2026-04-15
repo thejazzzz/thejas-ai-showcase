@@ -21,7 +21,7 @@ const ProjectCard = ({
   website,
 }: ProjectCardProps) => {
   return (
-    <Card className="overflow-hidden h-full flex flex-col transform transition-transform hover:-translate-y-1 hover:shadow-lg">
+    <Card variant="playful" className="overflow-hidden h-full flex flex-col">
       {image && (
         <div className="aspect-video w-full overflow-hidden">
           <img 
@@ -32,7 +32,7 @@ const ProjectCard = ({
         </div>
       )}
       <CardHeader>
-        <CardTitle className="text-xl">{title}</CardTitle>
+        <CardTitle className="text-xl font-display">{title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
         <CardDescription className="text-foreground/80 mb-4">
@@ -40,7 +40,7 @@ const ProjectCard = ({
         </CardDescription>
         <div className="flex flex-wrap gap-1 mt-4">
           {tech.map((item) => (
-            <Badge key={item} variant="secondary" className="bg-secondary/80">
+            <Badge key={item} variant="playful">
               {item}
             </Badge>
           ))}
@@ -53,7 +53,7 @@ const ProjectCard = ({
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/70 hover:text-tech-blue transition-colors"
+              className="text-foreground/70 hover:text-tech-purple transition-colors rounded-full border border-border/70 bg-card/80 p-2"
               aria-label={`Github repo for ${title}`}
             >
               <Github className="h-5 w-5" />
@@ -64,7 +64,7 @@ const ProjectCard = ({
               href={website}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/70 hover:text-tech-blue transition-colors"
+              className="text-foreground/70 hover:text-tech-purple transition-colors rounded-full border border-border/70 bg-card/80 p-2"
               aria-label={`Live website for ${title}`}
             >
               <ExternalLink className="h-5 w-5" />
