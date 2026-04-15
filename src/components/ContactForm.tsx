@@ -26,54 +26,40 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-      setIsSubmitting(false);
-    }, 1000);
+    const formspreeEndpoint = "https://formspree.io/f/xkokojkw";
     
-    // For actual form submission, use:
-    // const formspreeEndpoint = "https://formspree.io/f/your-formspree-endpoint";
-    // try {
-    //   const response = await fetch(formspreeEndpoint, {
-    //     method: "POST",
-    //     body: JSON.stringify(formData),
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   });
-    //   if (response.ok) {
-    //     toast({
-    //       title: "Message sent!",
-    //       description: "Thanks for reaching out. I'll get back to you soon.",
-    //     });
-    //     setFormData({
-    //       name: "",
-    //       email: "",
-    //       subject: "",
-    //       message: "",
-    //     });
-    //   } else {
-    //     throw new Error("Failed to send message");
-    //   }
-    // } catch (error) {
-    //   toast({
-    //     title: "Error",
-    //     description: "Failed to send message. Please try again.",
-    //     variant: "destructive",
-    //   });
-    // } finally {
-    //   setIsSubmitting(false);
-    // }
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thanks for reaching out. I'll get back to you soon.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
