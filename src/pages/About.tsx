@@ -109,9 +109,9 @@ const About = () => {
               </p>
             </div>
             <div className="section-shell">
-              <h3 className="text-xl font-display font-semibold mb-3">Snacker Vending Machine App</h3>
+              <h3 className="text-xl font-display font-semibold mb-3">Virtual Research Assistant (VRA)</h3>
               <p className="text-foreground/70">
-                Creating a QR-based vending solution to improve snack accessibility and transaction speed at snacker.in.net.
+                Developing an AI-powered research automation platform that acquires scholarly data, constructs knowledge/citation/author graphs, identifies research gaps, and generates structured reports with interactive human-in-the-loop approval gates.
               </p>
             </div>
           </div>

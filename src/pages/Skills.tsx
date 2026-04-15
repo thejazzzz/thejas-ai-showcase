@@ -15,22 +15,22 @@ const Skills = () => {
             
             <SkillCategory
               title="Programming Languages"
-              skills={["Python", "Java", "C", "HTML", "CSS", "JavaScript"]}
+              skills={["Python", "Java", "C", "JavaScript", "TypeScript"]}
             />
             
             <SkillCategory
               title="AI & Machine Learning"
-              skills={["TensorFlow", "Scikit-Learn", "LangChain", "CrewAI", "NLTK", "Multi-Agent Systems"]}
+              skills={["TensorFlow", "Scikit-Learn", "LangChain", "CrewAI", "NLP", "Multi-Agent Systems", "NLTK", "LLM Integration", "Knowledge Graphs", "LLM Pipelines", "Prompt Engineering"]}
             />
             
             <SkillCategory
-              title="Web Development"
-              skills={["HTML", "CSS", "JavaScript", "React.js", "Streamlit"]}
+              title="Backend & Web Development"
+              skills={["FastAPI", "REST APIs", "React.js", "Next.js", "Streamlit", "Firebase"]}
             />
             
             <SkillCategory
-              title="Databases"
-              skills={["MySQL", "Supabase"]}
+              title="Databases & Storage"
+              skills={["PostgreSQL", "MySQL", "SQLAlchemy", "Redis", "ChromaDB", "Supabase"]}
             />
           </div>
           
@@ -38,24 +38,24 @@ const Skills = () => {
             <div className="section-shell mb-8">
               <h3 className="text-xl font-display font-semibold mb-4">Tools & Technologies</h3>
               <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <h4 className="font-medium mb-2">Development Tools</h4>
-                  <ul className="list-disc list-inside space-y-1 text-foreground/80">
-                    <li>Git</li>
-                    <li>VS Code</li>
-                    <li>Jupyter Notebook</li>
-                    <li>Google Colab</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-medium mb-2">Libraries & Frameworks</h4>
-                  <ul className="list-disc list-inside space-y-1 text-foreground/80">
-                    <li>Plotly</li>
-                    <li>Requests</li>
-                    <li>pyPDF2</li>
-                    <li>React.js</li>
-                  </ul>
-                </div>
+              <div>
+                <h4 className="font-medium mb-2">Development & DevOps</h4>
+                <ul className="list-disc list-inside space-y-1 text-foreground/80">
+                  <li>Git</li>
+                  <li>Docker</li>
+                  <li>VS Code</li>
+                  <li>LaTeX</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-medium mb-2">Libraries & Frameworks</h4>
+                <ul className="list-disc list-inside space-y-1 text-foreground/80">
+                  <li>Plotly</li>
+                  <li>Requests</li>
+                  <li>pyPDF2</li>
+                  <li>NetworkX</li>
+                </ul>
+              </div>
               </div>
             </div>
             
@@ -65,25 +65,25 @@ const Skills = () => {
                 <div className="section-shell">
                   <h4 className="font-medium mb-2">Problem Solving</h4>
                   <p className="text-foreground/70">
-                    Ability to break down complex problems and find efficient solutions.
+                    Breaking down complex problems and implementing efficient solutions across AI and backend systems.
                   </p>
                 </div>
                 <div className="section-shell">
-                  <h4 className="font-medium mb-2">Teamwork</h4>
+                  <h4 className="font-medium mb-2">Team Collaboration</h4>
                   <p className="text-foreground/70">
-                    Experience collaborating in diverse teams to achieve project goals.
+                    Experience working in diverse teams and implementing Agile methodologies for project success.
                   </p>
                 </div>
                 <div className="section-shell">
                   <h4 className="font-medium mb-2">Market Research</h4>
                   <p className="text-foreground/70">
-                    Understanding market needs for product development.
+                    Understanding market needs and competitive landscapes for product development.
                   </p>
                 </div>
                 <div className="section-shell">
-                  <h4 className="font-medium mb-2">Time & Activity Management</h4>
+                  <h4 className="font-medium mb-2">Time Management</h4>
                   <p className="text-foreground/70">
-                    Efficient organization of tasks and deadlines.
+                    Efficient organization and prioritization of tasks across multiple concurrent projects.
                   </p>
                 </div>
               </div>
@@ -92,12 +92,13 @@ const Skills = () => {
             <div className="gradient-panel noise-overlay p-6">
               <h3 className="text-xl font-display font-semibold mb-4">Professional Development</h3>
               <p className="text-foreground/80">
-                I'm continuously expanding my skill set through online courses, hackathons, and personal projects. Currently focusing on deepening my knowledge in:
+                I'm continuously expanding my skill set through hands-on projects and real-world applications. Currently focused on:
               </p>
               <ul className="list-disc list-inside mt-4 space-y-2 text-foreground/80">
-                <li>Advanced AI agent architectures</li>
-                <li>Natural Language Processing techniques</li>
-                <li>Full-stack development with React</li>
+                <li>Advanced multi-agent system architectures</li>
+                <li>Natural Language Processing and LLM integration techniques</li>
+                <li>Knowledge graph construction and graph analytics</li>
+                <li>Full-stack AI applications with Next.js and FastAPI</li>
               </ul>
             </div>
           </div>

@@ -118,14 +118,17 @@ const Index = () => {
           <h2 className="section-title">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-10">
             <div className="section-shell">
-              <h3 className="text-xl font-semibold font-display mb-3">AI-Driven Career Assistant</h3>
+              <h3 className="text-xl font-semibold font-display mb-3">Virtual Research Assistant (VRA)</h3>
               <p className="text-foreground/70 mb-4">
-                AI-powered system using NLP and ML to provide personalized job recommendations and skill paths based on resumes.
+                AI-powered research automation platform that acquires scholarly data, constructs knowledge/citation/author graphs, identifies research gaps, and generates structured reports with interactive approval gates.
               </p>
               <div className="flex flex-wrap gap-2 mt-4 mb-6">
-                <span className="skill-tag">AI</span>
-                <span className="skill-tag">NLP</span>
                 <span className="skill-tag">Python</span>
+                <span className="skill-tag">FastAPI</span>
+                <span className="skill-tag">Next.js</span>
+                <span className="skill-tag">React</span>
+                <span className="skill-tag">PostgreSQL</span>
+                <span className="skill-tag">ChromaDB</span>
               </div>
             </div>
             <div className="section-shell">
