@@ -22,18 +22,19 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    const formspreeEndpoint = "https://formspree.io/f/xkokojkw";
+    const formElement = e.currentTarget;
+    const formDataObj = new FormData(formElement);
     
     try {
-      const response = await fetch(formspreeEndpoint, {
+      const response = await fetch("https://formspree.io/f/xkokojkw", {
         method: "POST",
-        body: JSON.stringify(formData),
+        body: formDataObj,
         headers: {
-          "Content-Type": "application/json",
+          "Accept": "application/json",
         },
       });
       
@@ -49,12 +50,14 @@ const ContactForm = () => {
           message: "",
         });
       } else {
-        throw new Error("Failed to send message");
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to send message");
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: "Failed to send message. Please try again or contact me directly at thejasthomas2@gmail.com",
         variant: "destructive",
       });
     } finally {
@@ -63,7 +66,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6" method="POST" action="https://formspree.io/f/xkokojkw">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2">
