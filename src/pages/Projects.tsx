@@ -4,6 +4,14 @@ import ProjectCard from "@/components/ProjectCard";
 const Projects = () => {
   const projects = [
     {
+      title: "Virtual Research Assistant (VRA)",
+      description: "AI-powered research automation platform that acquires scholarly data, constructs knowledge/citation/author graphs, identifies research gaps, and generates structured reports with interactive human-in-the-loop approval gates.",
+      image: "/lovable-uploads/vra_knowledge_graph.png",
+      tech: ["Python", "FastAPI", "State Machine Workflow", "Next.js", "React 19", "PostgreSQL", "ChromaDB", "Redis", "NetworkX", "OpenAI/Gemini", "Vercel", "Render", "Neon"],
+      github: "https://github.com/thejazzzz/vra_project",
+      website: "https://vra-project.vercel.app/",
+    },
+    {
       title: "AI-Driven Career Assistant Multi-Agent System",
       description: "AI-powered system using NLP and ML to provide personalized job recommendations and skill paths based on resumes.",
       image: "/lovable-uploads/ai-driven.png",
@@ -31,14 +39,7 @@ const Projects = () => {
       tech: ["Task Management", "Collaboration", "Web App"],
       github: "https://github.com/thejazzzz/zenwork-eden-hackathon",
     },
-    {
-      title: "Virtual Research Assistant (VRA)",
-      description: "AI-powered research automation platform that acquires scholarly data, constructs knowledge/citation/author graphs, identifies research gaps, and generates structured reports with interactive human-in-the-loop approval gates.",
-      image: "/lovable-uploads/vra_knowledge_graph.png",
-      tech: ["Python", "FastAPI", "State Machine Workflow", "Next.js", "React 19", "PostgreSQL", "ChromaDB", "Redis", "NetworkX", "OpenAI/Gemini", "Vercel", "Render", "Neon"],
-      github: "https://github.com/thejazzzz/vra_project",
-      website: "https://vra-project.vercel.app/",
-    },
+
   ];
 
   return (
