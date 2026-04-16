@@ -1,13 +1,20 @@
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 const About = () => {
-  return <div className="page-shell">
+  const root = useRef<HTMLDivElement | null>(null);
+
+  useScrollReveal(root);
+
+  return <div ref={root} className="page-shell">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-display font-bold mb-12">About Me</h1>
+        <h1 data-animate="section" className="text-4xl font-display font-bold mb-12">About Me</h1>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+        <div data-animate="section" className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
           <div className="lg:col-span-2 order-2 lg:order-1">
-            <h2 className="text-2xl font-display font-semibold mb-6">Who I Am</h2>
+            <h2 className="text-2xl font-display font-semibold mb-6">Who I Am ?</h2>
             <p className="text-lg mb-6">
               I'm Thejas Thomas Mathew, a final-year B.Tech Computer Science (AI) student at Providence College of Engineering with a passion for building AI-driven systems and intelligent solutions.
             </p>
@@ -18,7 +25,7 @@ const About = () => {
               I enjoy tackling complex problems with creative solutions, constantly learning new technologies and methodologies to improve my skills. My approach combines technical expertise with strong teamwork abilities, allowing me to collaborate effectively on innovative projects.
             </p>
             
-            <div className="mt-10">
+            <div data-animate="section" className="mt-10">
               <h3 className="text-xl font-display font-semibold mb-4">Academic Background</h3>
               <div className="section-shell">
                 <div className="mb-6">
@@ -30,7 +37,7 @@ const About = () => {
               </div>
             </div>
             
-            <div className="mt-10">
+            <div data-animate="section" className="mt-10">
               <h3 className="text-xl font-display font-semibold mb-4">Notable Achievements</h3>
               <div className="space-y-6">
                 <div className="section-shell">
@@ -56,7 +63,7 @@ const About = () => {
           
           <div className="lg:col-span-1 order-1 lg:order-2">
             <div className="sticky top-24">
-              <div className="mb-8 flex justify-center">
+              <div data-animate="section" className="mb-8 flex justify-center">
                 <div className="relative">
                   <div className="w-60 h-60 md:w-72 md:h-72 rounded-[2rem] overflow-hidden border-4 border-tech-purple/50 shadow-xl rotate-2">
                     <img alt="Thejas Thomas Mathew" className="w-full h-full object-cover" src="/lovable-uploads/acb094cc-a801-4be9-8a62-a60198f2bd60.jpg" />
@@ -66,7 +73,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="section-shell mt-6">
+              <div data-animate="section" className="section-shell mt-6">
                 <h3 className="font-display font-semibold text-lg mb-4">Personal Details</h3>
                 <ul className="space-y-3">
                   <li>
@@ -90,7 +97,7 @@ const About = () => {
                 </ul>
               </div>
               
-              <div className="mt-6">
+              <div data-animate="section" className="mt-6">
                 <Link to="/contact">
                   <Button variant="neon" className="w-full">Get In Touch</Button>
                 </Link>
@@ -99,7 +106,7 @@ const About = () => {
           </div>
         </div>
         
-        <div className="my-16 text-center">
+        <div data-animate="section" className="my-16 text-center">
           <h2 className="text-2xl font-display font-bold mb-6">What I'm Currently Working On</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="section-shell">

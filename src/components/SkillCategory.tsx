@@ -9,9 +9,9 @@ interface SkillCategoryProps {
 
 const SkillCategory = ({ title, skills, className }: SkillCategoryProps) => {
   return (
-    <div className={cn("mb-8 section-shell", className)}>
+    <div data-animate="section" className={cn("mb-8 section-shell", className)}>
       <h3 className="text-lg font-semibold mb-3 font-display">{title}</h3>
-      <div className="flex flex-wrap">
+      <div data-animate="stagger" className="flex flex-wrap">
         {skills.map((skill) => (
           <span key={skill} className="skill-tag">
             {skill}

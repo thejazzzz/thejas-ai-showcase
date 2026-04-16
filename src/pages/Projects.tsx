@@ -1,7 +1,13 @@
 
+import { useRef } from "react";
 import ProjectCard from "@/components/ProjectCard";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Projects = () => {
+  const root = useRef<HTMLDivElement | null>(null);
+
+  useScrollReveal(root);
+
   const projects = [
     {
       title: "Virtual Research Assistant (VRA)",
@@ -43,11 +49,11 @@ const Projects = () => {
   ];
 
   return (
-    <div className="page-shell">
+    <div ref={root} className="page-shell">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-display font-bold mb-12">My Projects</h1>
+        <h1 data-animate="section" className="text-4xl font-display font-bold mb-12">My Projects</h1>
         
-        <div className="mb-10">
+        <div data-animate="section" className="mb-10">
           <p className="text-lg max-w-3xl">
             Here are some of the projects I've worked on. Each project represents my passion for building AI-driven solutions and web applications that solve real-world problems.
           </p>
@@ -67,7 +73,7 @@ const Projects = () => {
           ))}
         </div>
         
-        <div className="mt-16">
+        <div data-animate="section" className="mt-16">
           <h2 className="text-2xl font-display font-bold mb-6">Other Notable Projects</h2>
           <div className="section-shell">
             <p className="text-lg mb-4">

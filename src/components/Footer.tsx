@@ -1,12 +1,38 @@
 
+import { useLayoutEffect, useRef } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { gsap, motionAllowed } from "@/lib/gsap";
 
 const Footer = () => {
+  const root = useRef<HTMLElement | null>(null);
+
+  useLayoutEffect(() => {
+    if (!motionAllowed()) {
+      return;
+    }
+
+    const ctx = gsap.context(() => {
+      gsap.from("[data-animate='footer']", {
+        y: 22,
+        autoAlpha: 0,
+        duration: 0.7,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top bottom",
+          once: true,
+        },
+      });
+    }, root);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <footer className="mt-16 pb-8">
+    <footer ref={root} className="mt-16 pb-8">
       <div className="container mx-auto">
-        <div className="gradient-panel noise-overlay p-8 md:p-10">
+        <div data-animate="footer" className="gradient-panel noise-overlay p-8 md:p-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="mb-6 md:mb-0">
             <Link to="/" className="font-display font-extrabold text-xl tracking-tight">

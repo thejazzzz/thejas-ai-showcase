@@ -1,41 +1,51 @@
 
+import { useRef } from "react";
 import SkillCategory from "@/components/SkillCategory";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Skills = () => {
+  const root = useRef<HTMLDivElement | null>(null);
+
+  useScrollReveal(root);
+
   return (
-    <div className="page-shell">
+    <div ref={root} className="page-shell">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-display font-bold mb-12">My Skills</h1>
+        <h1 data-animate="section" className="text-4xl font-display font-bold mb-12">My Skills</h1>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-lg mb-8">
+            <p data-animate="section" className="text-lg mb-8">
               My technical expertise has grown through academic study and hands-on project experience. Here's a comprehensive overview of my skills:
             </p>
             
             <SkillCategory
               title="Programming Languages"
               skills={["Python", "Java", "C", "JavaScript", "TypeScript"]}
+              className="motion-safe"
             />
             
             <SkillCategory
               title="AI & Machine Learning"
               skills={["TensorFlow", "Scikit-Learn", "LangChain", "CrewAI", "NLP", "Multi-Agent Systems", "NLTK", "LLM Integration", "Knowledge Graphs", "LLM Pipelines", "Prompt Engineering"]}
+              className="motion-safe"
             />
             
             <SkillCategory
               title="Backend & Web Development"
               skills={["FastAPI", "REST APIs", "React.js", "Next.js", "Streamlit", "Firebase"]}
+              className="motion-safe"
             />
             
             <SkillCategory
               title="Databases & Storage"
               skills={["PostgreSQL", "MySQL", "SQLAlchemy", "Redis", "ChromaDB", "Supabase"]}
+              className="motion-safe"
             />
           </div>
           
           <div>
-            <div className="section-shell mb-8">
+            <div data-animate="section" className="section-shell mb-8">
               <h3 className="text-xl font-display font-semibold mb-4">Tools & Technologies</h3>
               <div className="grid grid-cols-2 gap-4">
               <div>
@@ -59,7 +69,7 @@ const Skills = () => {
               </div>
             </div>
             
-            <div className="mb-8">
+            <div data-animate="section" className="mb-8">
               <h3 className="text-xl font-display font-semibold mb-4">Soft Skills</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="section-shell">
@@ -89,7 +99,7 @@ const Skills = () => {
               </div>
             </div>
             
-            <div className="gradient-panel noise-overlay p-6">
+            <div data-animate="section" className="gradient-panel noise-overlay p-6">
               <h3 className="text-xl font-display font-semibold mb-4">Professional Development</h3>
               <p className="text-foreground/80">
                 I'm continuously expanding my skill set through hands-on projects and real-world applications. Currently focused on:

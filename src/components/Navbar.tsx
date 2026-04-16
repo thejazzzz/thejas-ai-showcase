@@ -1,11 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { gsap, motionAllowed } from "@/lib/gsap";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const root = useRef<HTMLElement | null>(null);
+
+  useLayoutEffect(() => {
+    if (!motionAllowed()) {
+      return;
+    }
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+      tl.from("[data-animate='brand']", { y: -18, autoAlpha: 0, duration: 0.5 }).from(
+        "[data-animate='navcluster']",
+        { y: -12, autoAlpha: 0, duration: 0.45 },
+        "-=0.25"
+      );
+    }, root);
+
+    return () => ctx.revert();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +56,7 @@ const Navbar = () => {
 
   return (
     <nav
+      ref={root}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/75 backdrop-blur-xl py-3"
@@ -43,7 +64,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="font-display font-extrabold text-xl tracking-tight">
+        <Link data-animate="brand" to="/" className="font-display font-extrabold text-xl tracking-tight">
           <span className="bg-gradient-to-r from-tech-purple via-tech-pink to-tech-blue bg-clip-text text-transparent">
             Thejas
           </span>
@@ -51,7 +72,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-3 rounded-full border border-border/70 bg-card/75 px-3 py-2 shadow-[0_14px_32px_-20px_rgba(109,40,217,0.7)] backdrop-blur-sm">
+        <div data-animate="navcluster" className="hidden md:flex items-center space-x-3 rounded-full border border-border/70 bg-card/75 px-3 py-2 shadow-[0_14px_32px_-20px_rgba(109,40,217,0.7)] backdrop-blur-sm">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -73,6 +94,7 @@ const Navbar = () => {
 
         {/* Mobile menu button */}
         <button
+          data-animate="navcluster"
           onClick={toggleMenu}
           className="md:hidden rounded-xl border border-border/70 bg-card/80 p-2.5 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           aria-label="Toggle menu"

@@ -21,7 +21,7 @@ const ProjectCard = ({
   website,
 }: ProjectCardProps) => {
   return (
-    <Card variant="playful" className="overflow-hidden h-full flex flex-col">
+    <Card data-animate="card" variant="playful" className="overflow-hidden h-full flex flex-col">
       {image && (
         <div className="aspect-video w-full overflow-hidden">
           <img 
