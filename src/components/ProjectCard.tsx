@@ -27,6 +27,8 @@ const ProjectCard = ({
           <img 
             src={image} 
             alt={title} 
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
           />
         </div>

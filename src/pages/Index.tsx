@@ -3,9 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, ArrowDown, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { gsap, motionAllowed } from "@/lib/gsap";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Index = () => {
   const root = useRef<HTMLDivElement | null>(null);
+
+  useScrollReveal(root);
 
   useLayoutEffect(() => {
     if (!motionAllowed()) {
@@ -84,35 +87,6 @@ const Index = () => {
           scrub: 1,
         },
       });
-
-      gsap.utils.toArray<HTMLElement>("[data-animate='section']").forEach((element) => {
-        gsap.from(element, {
-          y: 28,
-          autoAlpha: 0,
-          duration: 0.7,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: element,
-            start: "top 84%",
-            once: true,
-          },
-        });
-      });
-
-      gsap.utils.toArray<HTMLElement>("[data-animate='stagger']").forEach((element) => {
-        gsap.from(element.children, {
-          y: 18,
-          autoAlpha: 0,
-          duration: 0.5,
-          stagger: 0.08,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: element,
-            start: "top 84%",
-            once: true,
-          },
-        });
-      });
     }, root);
 
     return () => ctx.revert();
@@ -169,7 +143,13 @@ const Index = () => {
             <div className="w-full lg:w-1/2 mb-10 lg:mb-0 flex justify-center order-1 lg:order-2">
               <div data-animate="portrait" data-parallax="hero-portrait" className="relative float-slow">
               <div className="w-72 h-72 md:w-96 md:h-96 rounded-[2.2rem] overflow-hidden border-4 border-tech-purple/50 shadow-xl rotate-2">
-                  <img alt="Thejas Thomas Mathew" className="w-full h-full object-cover" src="/lovable-uploads/8b9b41e6-4bbe-46e2-bb4d-31ab9e43cc20.png" />
+                  <img
+                    alt="Thejas Thomas Mathew"
+                    className="w-full h-full object-cover"
+                    src="/lovable-uploads/8b9b41e6-4bbe-46e2-bb4d-31ab9e43cc20.png"
+                    decoding="async"
+                    fetchPriority="high"
+                  />
                 </div>
                 {/* Decorative elements */}
                 <div data-parallax="hero-orb-a" className="absolute -top-4 -right-4 w-20 h-20 bg-tech-purple/30 rounded-full blur-xl"></div>
